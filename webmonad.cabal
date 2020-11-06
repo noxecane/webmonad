@@ -1,0 +1,49 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: db989057ae80e59dbed4d199bb4d71c6852ee51b5e673570a7584cdc05bffba8
+
+name:           webmonad
+version:        0.1.0.0
+category:       web
+homepage:       https://github.com/noxecane/webmonad
+author:         Arewa Olakunle
+maintainer:     arewa.olakunle@gmail.com
+copyright:      Arewa Olakunle
+license:        AllRightsReserved
+build-type:     Simple
+
+library
+  exposed-modules:
+      Control.Monad.X.Web
+      Data.X.AlaCarte
+      Data.X.Parser
+      Data.X.Time
+      Opaleye.X
+      Opaleye.X.Alias
+      Opaleye.X.TH
+      Prelude.X
+  other-modules:
+      Paths_webmonad
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Widentities -Wpartial-fields -Wredundant-constraints -fhide-source-paths
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , exceptions
+    , mtl
+    , opaleye
+    , postgresql-simple
+    , product-profunctors
+    , profunctors
+    , random
+    , split
+    , template-haskell
+    , text
+    , time
+    , transformers
+  default-language: Haskell2010
