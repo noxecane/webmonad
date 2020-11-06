@@ -8,7 +8,7 @@ module Control.Monad.X.Web where
 import Control.Monad.Except (ExceptT (..), MonadError, runExceptT, throwError)
 import Control.Monad.IO.Class (MonadIO, liftIO)
 import Control.Monad.Reader (MonadReader (..), ReaderT, asks, runReaderT)
-import Control.X.AlaCarte (inject, (:+:), (:<:))
+import Data.X.AlaCarte (inject, (:+:), (:<:))
 import Database.PostgreSQL.Simple (Connection)
 import Opaleye.X
   ( DbError,

@@ -5,7 +5,7 @@
 {-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE ViewPatterns #-}
 
-module Control.X.AlaCarte where
+module Data.X.AlaCarte where
 
 absurd :: a
 absurd = error "This makes no sense"
