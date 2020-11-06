@@ -1,3 +1,4 @@
+{-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE PatternSynonyms #-}
@@ -49,3 +50,14 @@ pattern U x <-
   (outject -> Just x)
   where
     U x = inject x
+
+-- Let's make everyone happy
+type MemberOf f g = f :<: g
+
+type Throws f g = f :+: g
+
+throwOne :: (MemberOf f g) => f -> g
+throwOne = inject
+
+catchOne :: (MemberOf f g) => g -> Maybe f
+catchOne = outject
